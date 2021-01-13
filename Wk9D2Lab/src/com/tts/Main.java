@@ -1,9 +1,5 @@
 package com.tts;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +21,6 @@ public class Main {
                     break;
                 }
             }
-
             Integer[] nums = intList.toArray(new Integer[0]);
             System.out.println(Arrays.toString(nums));
             for(int num: nums) {
@@ -35,9 +30,11 @@ public class Main {
                 product = product * num;
             }
         }
-
+        int maxBig = Collections.max(intList);
+        int minSmall = Collections.min(intList);
         System.out.println("Sum of the elements of the array ::"+sum);
         System.out.println("Product of the elements of the array ::"+product);
+        System.out.println("Your largest element is  "+ maxBig);
+        System.out.println("Your smallest element is  "+ minSmall);
         }
-
 }
